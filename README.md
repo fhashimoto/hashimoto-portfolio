@@ -1,2 +1,1 @@
-# hashimoto-portfolio
-Felipe Hashimoto Portfolio
+# Felipe Hashimoto Portfolio
