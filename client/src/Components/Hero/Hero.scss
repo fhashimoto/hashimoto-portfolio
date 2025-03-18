@@ -1,0 +1,24 @@
+.hero-container {
+  padding: 50px 0;
+
+  &__text {
+    h1 {
+      font-size: 50px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .subheading {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-size: 18px;
+      font-weight: 400;
+      color: #666;
+      margin-bottom: 8px;
+    }
+  }
+}

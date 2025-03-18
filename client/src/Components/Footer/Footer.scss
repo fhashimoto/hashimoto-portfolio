@@ -1,0 +1,11 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+
+  .footer-links {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+  }
+}
