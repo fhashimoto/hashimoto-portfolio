@@ -17,6 +17,8 @@ export const Contact = () => {
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    console.log("ENV => ", import.meta.env);
+
     try {
       dispatch(resetState());
       await emailjs.sendForm(
