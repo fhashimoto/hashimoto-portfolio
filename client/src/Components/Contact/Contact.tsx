@@ -20,10 +20,10 @@ export const Contact = () => {
     try {
       dispatch(resetState());
       await emailjs.sendForm(
-        import.meta.env.EMAILJS_SERVICE_ID,
-        import.meta.env.EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current || "",
-        import.meta.env.EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
       dispatch(sentEmailSuccess());
       if (form.current) {
@@ -34,7 +34,6 @@ export const Contact = () => {
       }, 5000);
     } catch (error) {
       dispatch(sentEmailError());
-      console.error(error)
     }
   };
 
