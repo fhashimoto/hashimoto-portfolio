@@ -6,8 +6,7 @@ import {
   closeModal,
   resetState,
   sentEmailError,
-  sentEmailSuccess,
-  testLoading,
+  sentEmailSuccess
 } from "../../features/contact/contactSlice";
 import { RootState } from "../../store/store";
 import "./Contact.scss";
