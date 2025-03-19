@@ -7,5 +7,10 @@
     display: flex;
     justify-content: center;
     gap: 18px;
+
+    > a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 }

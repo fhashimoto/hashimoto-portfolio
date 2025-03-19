@@ -10,7 +10,6 @@ const dropdownSlice = createSlice({
       state.isOpen = true;
     },
     closeDropdown: (state) => {
-      console.log("DROPDOWN")
       state.isOpen = false;
     },
   },

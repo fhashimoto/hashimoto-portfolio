@@ -1,57 +1,64 @@
-.header-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  gap: 20px;
-  font-size: 20px;
+.header-hero-container {
+  background-image: url("https://placehold.co/1920x1080?text=Hello+World");
+  background-position: left;
+  background-size: auto;
+  background-repeat: no-repeat;
 
-  > div {
-    &:first-child {
-      margin-right: 20px;
-    }
-    &:last-child {
-      margin-left: 20px;
-    }
-  }
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    gap: 20px;
+    font-size: 20px;
 
-  .header-link {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .header-language {
-    position: relative;
-    z-index: 100a;
-
-    &__link {
-      cursor: pointer;
-    }
-
-    &__options {
-      position: absolute;
-      width: max-content;
-      left: 50%;
-      transform: translate(-50%, -10px);
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      opacity: 0;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      pointer-events: none;
-
-      &.open {
-        opacity: 1;
-        transform: translate(-50%, 0px);
-        pointer-events: all;
+    > div {
+      &:first-child {
+        margin-right: 20px;
       }
-      .dropdown-language-option {
-        background-color: white;
-        padding: 8px;
-        cursor: pointer;
+      &:last-child {
+        margin-left: 20px;
+      }
+    }
 
-        &.selected {
-          background-color: blue;
+    .header-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .header-language {
+      position: relative;
+      z-index: 100a;
+
+      &__link {
+        cursor: pointer;
+      }
+
+      &__options {
+        position: absolute;
+        width: max-content;
+        left: 50%;
+        transform: translate(-50%, -10px);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+
+        &.open {
+          opacity: 1;
+          transform: translate(-50%, 0px);
+          pointer-events: all;
+        }
+        .dropdown-language-option {
+          background-color: white;
+          padding: 8px;
+          cursor: pointer;
+
+          &.selected {
+            background-color: blue;
+          }
         }
       }
     }

@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./App.scss";
-import { Footer, Header, Hero } from "./Components";
+import { Contact, Footer, Header, Hobbies, Skills } from "./Components";
+import { ConfirmationModal } from "./Components/Contact/ConfirmationModal";
 import { closeDropdown } from "./features/dropdown/dropdownSlice";
 import { RootState } from "./store/store";
 
@@ -9,9 +10,11 @@ export const App = () => {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="app-container">
       <Header />
-      <Hero />
+      <Skills />
+      <Contact />
+      <Hobbies />
       <Footer />
       {isOpen && (
         <div
@@ -19,6 +22,7 @@ export const App = () => {
           onClick={() => dispatch(closeDropdown())}
         />
       )}
+      <ConfirmationModal />
     </div>
   );
 };

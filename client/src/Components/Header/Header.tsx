@@ -1,4 +1,5 @@
 // src/components/Header.tsx
+import { useState } from "react";
 import { FaLanguage } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { Logo } from "../../assets/logo";
@@ -6,10 +7,10 @@ import {
   closeDropdown,
   openDropdown,
 } from "../../features/dropdown/dropdownSlice";
-import { ILink } from "../../Utils/Interface";
-import "./Header.scss";
 import { RootState } from "../../store/store";
-import { useState } from "react";
+import { ILink } from "../../Utils/Interface";
+import { Hero } from "../Hero/Hero";
+import "./Header.scss";
 
 export const Header = () => {
   const languages = ["English", "Português - BR"];
@@ -38,31 +39,34 @@ export const Header = () => {
   };
 
   return (
-    <div className="header-container">
-      <Logo />
-      {links.map((item) => (
-        <a key={item.label} href={item.link} className="header-link">
-          {item.label}
-        </a>
-      ))}
-      <div className="header-language">
-        <div className="header-language__link" onClick={toggleDropdown}>
-          <FaLanguage size={40} />
-        </div>
-        <div className={`header-language__options ${isOpen ? "open" : ""}`}>
-          {languages.map((lang) => (
-            <div
-              key={lang}
-              className={`dropdown-language-option ${
-                lang === websiteLang ? "selected" : ""
-              }`}
-              onClick={() => handleLanguageChange(lang)}
-            >
-              {lang}
-            </div>
-          ))}
+    <div className="header-hero-container">
+      <div className="header-container">
+        <Logo />
+        {links.map((item) => (
+          <a key={item.label} href={item.link} className="header-link">
+            {item.label}
+          </a>
+        ))}
+        <div className="header-language">
+          <div className="header-language__link" onClick={toggleDropdown}>
+            <FaLanguage size={40} />
+          </div>
+          <div className={`header-language__options ${isOpen ? "open" : ""}`}>
+            {languages.map((lang) => (
+              <div
+                key={lang}
+                className={`dropdown-language-option ${
+                  lang === websiteLang ? "selected" : ""
+                }`}
+                onClick={() => handleLanguageChange(lang)}
+              >
+                {lang}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+      <Hero />
     </div>
   );
 };

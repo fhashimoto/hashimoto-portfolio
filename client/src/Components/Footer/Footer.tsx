@@ -9,10 +9,10 @@ export const Footer = () => {
         <span>&copy; 2025 Felipe Hashimoto. All rights reserved.</span>
       </div>
       <div className="footer-links">
-        <a href="https://www.linkedin.com/in/hashimotofelipe/">
+        <a href="https://www.linkedin.com/in/hashimotofelipe/" target="_blank">
           <FaLinkedin size={40} />
         </a>
-        <a href="https://github.com/fhashimoto">
+        <a href="https://github.com/fhashimoto" target="_blank">
           <FaGithub size={40} />
         </a>
       </div>
