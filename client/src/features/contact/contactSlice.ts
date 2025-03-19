@@ -20,6 +20,7 @@ const contactSlice = createSlice({
   reducers: {
     resetState: (state) => {
       Object.assign(state, initialState);
+      state.isLoading = true;
     },
     sentEmailSuccess: (state) => {
       state.isOpen = true;
@@ -37,9 +38,17 @@ const contactSlice = createSlice({
     closeModal: (state) => {
       state.isOpen = false;
     },
+    testLoading: (state) => {
+      state.isLoading = !state.isLoading;
+    },
   },
 });
 
-export const { resetState, sentEmailSuccess, sentEmailError, closeModal } =
-  contactSlice.actions;
+export const {
+  resetState,
+  sentEmailSuccess,
+  sentEmailError,
+  closeModal,
+  testLoading,
+} = contactSlice.actions;
 export default contactSlice.reducer;

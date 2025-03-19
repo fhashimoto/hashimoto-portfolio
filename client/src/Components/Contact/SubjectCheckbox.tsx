@@ -1,8 +1,13 @@
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
+
 interface ISubjectCheckbox {
   value: string;
 }
 
 export const SubjectCheckbox = ({ value }: ISubjectCheckbox) => {
+  const { isLoading } = useSelector((state: RootState) => state.contact);
+
   const handleCheckboxClick = (e: React.KeyboardEvent) => {
     if (e.key === " " || e.key === "Enter") {
       e.preventDefault();
@@ -19,7 +24,12 @@ export const SubjectCheckbox = ({ value }: ISubjectCheckbox) => {
       tabIndex={0}
       onKeyDown={handleCheckboxClick}
     >
-      <input type="checkbox" name="subject" value={value} />
+      <input
+        type="checkbox"
+        name="subject"
+        value={value}
+        disabled={isLoading}
+      />
       <div className="checkmark" />
       <span>{value}</span>
     </label>

@@ -1,18 +1,22 @@
 import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import LoadingIcon from "../../assets/loading";
 import {
   closeModal,
   resetState,
   sentEmailError,
   sentEmailSuccess,
+  testLoading,
 } from "../../features/contact/contactSlice";
+import { RootState } from "../../store/store";
 import "./Contact.scss";
 import { SubjectCheckbox } from "./SubjectCheckbox";
 
 export const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
   const dispatch = useDispatch();
+  const { isLoading } = useSelector((state: RootState) => state.contact);
 
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,12 +65,24 @@ export const Contact = () => {
       <form ref={form} onSubmit={sendEmail} className="contact-form-container">
         <label>
           <span>Full Name *</span>
-          <input type="text" name="name" required placeholder="Full Name" />
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="Full Name"
+            disabled={isLoading}
+          />
         </label>
 
         <label>
           <span>Email *</span>
-          <input type="email" name="email" required placeholder="Email" />
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Email"
+            disabled={isLoading}
+          />
         </label>
 
         <label>
@@ -76,6 +92,7 @@ export const Contact = () => {
             required
             placeholder="Leave me a message..."
             rows={8}
+            disabled={isLoading}
           />
         </label>
 
@@ -88,8 +105,8 @@ export const Contact = () => {
           </div>
         </div>
 
-        <button type="submit" className="submit-button">
-          Send Message
+        <button type="submit" className="submit-button" disabled={isLoading}>
+          {isLoading ? <LoadingIcon size={30} /> : <span>Send Message</span>}
         </button>
       </form>
     </div>
