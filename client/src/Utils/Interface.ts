@@ -9,5 +9,6 @@ export interface IJobCard {
   companyDescription: string;
   job: string;
   date: string;
-  description: string;
+  description: Array<string>;
+  link: string;
 }

@@ -27,7 +27,7 @@ const Carousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className="embla" dir="rtl">
+    <section className="embla" dir={props.options?.direction}>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((item, index) => (
@@ -37,7 +37,7 @@ const Carousel: React.FC<PropType> = (props) => {
               )}
               key={index}
             >
-              <div className="embla__slide__number">
+              <div className="embla__slide__content">
                 <JobCard jobCard={item} />
               </div>
             </div>

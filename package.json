@@ -1,0 +1,25 @@
+{
+  "name": "hashimoto-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fhashimoto/hashimoto-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fhashimoto/hashimoto-portfolio/issues"
+  },
+  "homepage": "https://github.com/fhashimoto/hashimoto-portfolio#readme"
+}

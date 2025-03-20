@@ -5,6 +5,6 @@ import { listJobs } from "./job-list";
 
 export const About = () => {
   return (
-    <Carousel slides={listJobs} options={{ direction: "rtl", loop: true }} />
+    <Carousel slides={listJobs} options={{ direction: "rtl", containScroll: false }} />
   );
 };
