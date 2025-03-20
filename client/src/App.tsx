@@ -4,6 +4,7 @@ import { Contact, Footer, Header, Hobbies, Skills } from "./Components";
 import { ConfirmationModal } from "./Components/Contact/ConfirmationModal";
 import { closeDropdown } from "./features/dropdown/dropdownSlice";
 import { RootState } from "./store/store";
+import { About } from "./Components/About/About";
 
 export const App = () => {
   const isOpen = useSelector((state: RootState) => state.dropdown.isOpen);
@@ -12,6 +13,7 @@ export const App = () => {
   return (
     <div className="app-container">
       <Header />
+      <About />
       <Skills />
       <Contact />
       <Hobbies />
