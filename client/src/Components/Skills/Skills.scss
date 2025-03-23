@@ -1,0 +1,33 @@
+.skill-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  --skill-col-gap: 20px;
+  --num-col: 4;
+  gap: var(--skill-col-gap);
+  .skill-container {
+    width: calc(
+      (100% - (var(--skill-col-gap) * (var(--num-col) - 1))) / var(--num-col)
+    );
+    display: flex;
+    flex-direction: column;
+
+    label {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .class-level {
+      display: flex;
+      div {
+        border: 1px solid black;
+        width: 20px;
+        height: 20px;
+
+        &.point {
+          background-color: green;
+        }
+      }
+    }
+  }
+}

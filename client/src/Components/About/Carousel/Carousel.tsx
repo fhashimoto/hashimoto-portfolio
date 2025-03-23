@@ -27,7 +27,7 @@ const Carousel: React.FC<PropType> = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className="embla" dir={props.options?.direction}>
+    <section className="embla" dir={props.options?.direction} id="about">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((item, index) => (
@@ -59,7 +59,9 @@ const Carousel: React.FC<PropType> = (props) => {
               className={"embla__dot".concat(
                 index === selectedIndex ? " embla__dot--selected" : ""
               )}
-            />
+            >
+              <p>{slides[index].date}</p>
+            </DotButton>
           ))}
         </div>
       </div>

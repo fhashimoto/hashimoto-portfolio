@@ -9,15 +9,35 @@
 
 body {
   background-color: #9494943c;
+  --app-size: 1440px;
 
   #root {
-    max-width: 1440px;
+    max-width: var(--app-size);
     margin: 0 auto;
   }
 
   .app-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #007bff, #00d4ff);
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
   }
 }

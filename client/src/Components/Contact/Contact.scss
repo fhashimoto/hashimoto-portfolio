@@ -6,24 +6,6 @@
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    h1 {
-      font-size: 3rem;
-      color: #333;
-      margin-bottom: 20px;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-
-      &:after {
-        content: "";
-        display: block;
-        width: 80px;
-        height: 4px;
-        background: linear-gradient(90deg, #007bff, #00d4ff);
-        margin: 12px auto 0;
-        border-radius: 2px;
-      }
-    }
-
     p {
       font-size: 1.2rem;
       color: #555;

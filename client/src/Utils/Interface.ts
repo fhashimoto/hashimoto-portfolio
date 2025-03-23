@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export interface ILink {
   label: string;
   link: string;
@@ -11,4 +13,15 @@ export interface IJobCard {
   date: string;
   description: Array<string>;
   link: string;
+}
+
+export interface IHobby {
+  title: string;
+  image: string;
+}
+
+export interface ISkill {
+  name: string;
+  icon: IconType;
+  level: number;
 }

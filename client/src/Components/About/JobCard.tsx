@@ -13,14 +13,14 @@ export const JobCard = ({ jobCard }: { jobCard: IJobCard }) => {
   return (
     <div className="embla__slide card">
       <div className="card-content">
-        <h2 className="card-title">
+        <h3 className="card-title">
           <a href={link} target="_blank">
             <strong>{company}</strong>, {location}
           </a>
-        </h2>
-        <h3 className="card-subtitle">
-          <em>{companyDescription}</em>
         </h3>
+        <p className="card-subtitle">
+          <em>{companyDescription}</em>
+        </p>
         <p className="card-date">
           <strong>{job}</strong>, {date}
         </p>

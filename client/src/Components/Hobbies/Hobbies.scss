@@ -1,0 +1,44 @@
+.hobby-list-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .hobby-container {
+    position: relative;
+    width: calc(var(--app-size) / 3);
+    height: calc(var(--app-size) / 3);
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+
+    p {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      z-index: 100;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+}

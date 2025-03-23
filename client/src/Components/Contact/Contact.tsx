@@ -52,15 +52,15 @@ export const Contact = () => {
   ];
 
   return (
-    <div className="contact-section">
-      <section className="contact-section-header">
-        <h1>Let's Connect!</h1>
+    <section className="contact-section" id="contact">
+      <div className="contact-section-header">
+        <h2>Let's Connect!</h2>
         <p>
           I'm always open to discussing new opportunities, collaborations, or
           mentorship. Whether it's a job, project, or just a chat, feel free to
           reach out!
         </p>
-      </section>
+      </div>
       <form ref={form} onSubmit={sendEmail} className="contact-form-container">
         <label>
           <span>Full Name *</span>
@@ -108,6 +108,6 @@ export const Contact = () => {
           {isLoading ? <LoadingIcon size={30} /> : <span>Send Message</span>}
         </button>
       </form>
-    </div>
+    </section>
   );
 };
